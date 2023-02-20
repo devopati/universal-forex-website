@@ -1,0 +1,230 @@
+
+.homepage-contents:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    background:var(--color-card);
+    transform: skew(-30deg);
+    transform-origin:top;
+    z-index: -1;
+  }
+.head-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 3.5rem;
+}
+.head-left-card{
+    background-image:  url(https://globalcapital-investment.com/assets/dist/img/proinvest-header.svg)  ;
+    
+}
+
+.welcome-content h1{
+    font-size: 36px;
+}
+
+.welcome-content p{
+    font-size: 18px;
+    color: var(--color-p);
+    margin-bottom: 30px;
+    width: 88%;
+}
+.btn-login{
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 2px solid var(--color-btn);
+    background-color: var(--color-white);
+    color: var(--color-btn);
+    transition: 0.15s ease-in-out;
+    margin-left: 1rem;
+}
+
+.btn-login:hover{
+    background: var(--color-btn);
+    color: var(--color-white);
+    border: 2px solid var(--color-btn);
+}
+
+
+.header__plans-calculator{
+    width: 90%;
+    margin: 2.7rem;
+    background: #49B1E6;
+    border-radius: 0.5rem;
+    margin-bottom: 2.2rem;
+
+}
+.header-calculator{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2.2rem;
+    margin: auto;
+}
+.header-calculator label{
+    color: var(--color-white);
+}
+
+
+.header-calculator button,input,select,textarea,optgroup{
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    
+}
+
+button, input {
+    overflow: visible;
+}
+
+.header-inputs {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color:var(--color-white);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+select.header-inputs:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px);
+}
+
+.plan-btn{
+    padding-top: 1.2rem;
+    margin-left: 2.5rem;
+}
+.header-plan, .header-amount{
+    margin-left: 2.5rem;
+}
+.access-btns{
+    margin-bottom: 2.2rem;
+}
+
+/*=========================ABOUT==================================*/
+
+
+.about-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 3.5rem;
+}
+.about-card-one{ 
+    padding: 8% 0;
+}
+.about-card h4{
+    font-size: 1.7rem;
+}
+
+.about-card p{
+    font-size: 15px;
+    color: var( --color-p-variant);
+    padding: 0 0 16px;
+}
+
+
+
+/***************************************************************************/
+
+
+/*========================INVEST==================================*/
+
+.invest-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+    padding: 3.5rem;
+}
+.invest-card{
+    box-shadow: 0px 2px 10px 0px rgb(154 161 171 / 18%);
+    -webkit-box-shadow: 0px 2px 10px 0px rgb(154 161 171 / 18%);
+    padding: 30px 20px 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    background: #f4f9ff;
+    text-align: center;
+}
+.invest-card h1{
+    color: #D3D3D3;
+    font-size: 40px;
+}
+.invest-card h4{
+    color: var(---color-black-variant);
+    font-size: 24px;
+}
+.invest-card p{
+    color: var( --color-p-variant);
+    font-size: 15px;
+}
+.invest-top{
+    text-align: center;
+    margin-top: 2.5rem;
+}
+.invest-top h4{
+    text-align: center;
+    font-size: 1.7rem;
+}
+/*=========================*****==================================*/
+
+
+@media screen and (max-width: 1024px) {
+    .round{
+        margin-left: -0.5rem;
+    }
+    .access-btns{
+        display: flex;
+    }
+    .head-card{
+        grid-template-columns: 1fr;
+        margin-left: 1.1rem;
+    }
+
+    .header-calculator{
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+        
+    }
+    .header__plans-calculator{
+        margin: auto;
+        width: 100%;
+    }
+    .head-left-card{
+        height: 30vh;
+        
+    }
+    .header-plan, .header-amount{
+        margin-left: -0.15rem;
+    }
+
+    /*=========================ABOUT==================================*/
+    .about-card{
+        grid-template-columns: 1fr;
+        margin-left: 1rem;
+    }
+
+
+    /******************************************************************/
+    /*=========================INVEST==================================*/
+    .invest-cards{
+        grid-template-columns:1fr;
+        padding: 1.1rem;
+    }
+
+
+    /******************************************************************/
+   
+    
+  }
+  @media screen and (max-width: 760px) {
+  
+}
