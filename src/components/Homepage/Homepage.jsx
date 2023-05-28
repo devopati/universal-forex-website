@@ -10,8 +10,58 @@ function Homepage() {
   const [popUpOpen, setPopUpOpen] = useState(false);
   const [amount, setAmount] = useState(0);
   const [plan, setPlan] = useState("");
+  const [fieldError, setFieldError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
   // console.log(amount);
   // console.log(plan);
+  const popUpHandler = () => {
+    if (!amount || !plan) {
+      setFieldError(true);
+      return;
+      // } else if (plan == "1") {
+      //   if (amount < 200) {
+      //     setFieldError(true);
+      //     setErrorMsg("Amount must be 200$ or more for this plan");
+      //     return;
+      //   } else if (amount > 1000) {
+      //     setFieldError(true);
+      //     setErrorMsg("Amount exceeds this plan choose another plan");
+      //     return;
+      //   }
+      // } else if (plan == "2") {
+      //   if (amount < 200) {
+      //     setFieldError(true);
+      //     setErrorMsg("Amount must be 200$ or more for this plan");
+      //     return;
+      //   } else if (amount > 10000) {
+      //     setFieldError(true);
+      //     setErrorMsg("Amount exceeds this plan choose another plan");
+      //     return;
+      //   }
+      // } else if (plan == "3") {
+      //   if (amount < 1000) {
+      //     setFieldError(true);
+      //     setErrorMsg("Amount must be 1000$ or more for this plan");
+      //     return;
+      //   } else if (amount > 9000) {
+      //     setFieldError(true);
+      //     setErrorMsg("Amount exceeds this plan choose another plan");
+      //     return;
+      //   }
+      // } else if (plan == "4") {
+      //   if (amount < 10000) {
+      //     setFieldError(true);
+      //     setErrorMsg("Amount must be 10000$ or more for this plan");
+      //     return;
+      //   } else if (amount > 50000) {
+      //     setFieldError(true);
+      //     setErrorMsg("Amount exceeds this plan choose another plan");
+      //     return;
+      //   }
+    } else {
+      setPopUpOpen(true);
+    }
+  };
 
   return (
     <>
@@ -61,40 +111,52 @@ function Homepage() {
                   placeholder="Investment amount e.g $100"
                   onChange={(e) => setAmount(e.target.value)}
                 />
+                {!amount && fieldError && (
+                  <div className="error-field">
+                    {errorMsg
+                      ? errorMsg
+                      : "Fill this field to calculate earnings"}
+                  </div>
+                )}
               </div>
               <div className="header-plan">
                 <div className="headertop-bg">
                   <img src={bgIMG2} />
                 </div>
-                <label htmlFor="plan">Investment Plan</label>
-                <select
-                  className="header-inputs"
-                  name="plan"
-                  onChange={(e) => setPlan(e.target.value)}
-                >
-                  <option value selected>
-                    Select Plan
-                  </option>
-                  <option value="1">
-                    Basic Plan 1000.00% every 1 days for 1 days min:USD 200.00
-                    max:USD 1,000.00
-                  </option>
-                  <option value="2">
-                    Global Forex Investment 1000.00% every 24 hours for 24 hours
-                    min:USD 200.00 max:USD 10,000.00
-                  </option>
-                  <option value="3">
-                    Vip Plan 800.00% every 1 days for 1 days min:USD 1,000.00
-                    max:USD 9,000.00
-                  </option>
-                  <option value="4">
-                    Gold????plan 850.00% every 1 weeks for 1 weeks min:USD
-                    10,000.00 max:USD 50,000.00
-                  </option>
-                </select>
+                <div className="earn-plans">
+                  <label htmlFor="plan">Investment Plan</label>
+                  <select
+                    className="header-inputs"
+                    name="plan"
+                    onChange={(e) => setPlan(e.target.value)}
+                  >
+                    <option value selected>
+                      Select Plan
+                    </option>
+                    <option value="1">
+                      Basic Plan 1000.00% every 1 days for 1 days min:USD 200.00
+                      max:USD 1,000.00
+                    </option>
+                    <option value="2">
+                      Global Forex Investment 1000.00% every 24 hours for 24
+                      hours min:USD 200.00 max:USD 10,000.00
+                    </option>
+                    <option value="3">
+                      Vip Plan 800.00% every 1 days for 1 days min:USD 1,000.00
+                      max:USD 9,000.00
+                    </option>
+                    <option value="4">
+                      Gold????plan 850.00% every 1 weeks for 1 weeks min:USD
+                      10,000.00 max:USD 50,000.00
+                    </option>
+                  </select>
+                  {!plan && fieldError && (
+                    <div className="error-field">Select an investment plan</div>
+                  )}
+                </div>
               </div>
               <div className="plan-btn">
-                <button className="btn" onClick={() => setPopUpOpen(true)}>
+                <button className="btn" onClick={popUpHandler}>
                   CALCULATE EARNINGS
                 </button>
               </div>
@@ -105,6 +167,8 @@ function Homepage() {
               <EarningCalculator
                 popUpOpen={popUpOpen}
                 setPopUpOpen={setPopUpOpen}
+                plan={plan}
+                amount={amount}
               />
             </div>
           </div>

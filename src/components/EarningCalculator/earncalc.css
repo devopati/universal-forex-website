@@ -28,3 +28,9 @@
     justify-content: space-between;
     padding: 1.5rem 1rem;
 }
+#close-btn{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(131, 10, 10);
+    cursor: pointer;
+}

@@ -92,7 +92,11 @@
 .popup-close{
     display: none;
 }
-
+.error-field{
+    color: rgb(200, 3, 3);
+    padding: .3rem;
+    text-align: center;
+}
 @keyframes moveUpDown {
     0% {
       top: 0;
