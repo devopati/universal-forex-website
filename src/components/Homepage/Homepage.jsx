@@ -4,12 +4,23 @@ import "./homepage.css";
 import "animate.css";
 import bgIMG1 from "../../assets/bg1.png";
 import bgIMG2 from "../../assets/bg2.png";
+import EarningCalculator from "../EarningCalculator/EarningCalculator";
 
 function Homepage() {
+  const [popUpOpen, setPopUpOpen] = useState(false);
+  const [amount, setAmount] = useState(0);
+  const [plan, setPlan] = useState("");
+  // console.log(amount);
+  // console.log(plan);
+
   return (
     <>
       <Navigation />
-      <div className="homepage__container" style={{ marginTop: "6rem" }}>
+      <div
+        className="homepage__container"
+        style={{ marginTop: "6rem" }}
+        // onClick={() => popUpOpen && setPopUpOpen(false)}
+      >
         <div className="homepage-contents">
           <div className="top-bg">
             <img src={bgIMG1} />
@@ -48,6 +59,7 @@ function Homepage() {
                   type="text"
                   name="amount"
                   placeholder="Investment amount e.g $100"
+                  onChange={(e) => setAmount(e.target.value)}
                 />
               </div>
               <div className="header-plan">
@@ -55,7 +67,11 @@ function Homepage() {
                   <img src={bgIMG2} />
                 </div>
                 <label htmlFor="plan">Investment Plan</label>
-                <select className="header-inputs" name="plan">
+                <select
+                  className="header-inputs"
+                  name="plan"
+                  onChange={(e) => setPlan(e.target.value)}
+                >
                   <option value selected>
                     Select Plan
                   </option>
@@ -78,8 +94,18 @@ function Homepage() {
                 </select>
               </div>
               <div className="plan-btn">
-                <button className="btn">CALCULATE EARNINGS</button>
+                <button className="btn" onClick={() => setPopUpOpen(true)}>
+                  CALCULATE EARNINGS
+                </button>
               </div>
+            </div>
+            <div
+              className={`earningscalc-popup ${!popUpOpen && "popup-close"}`}
+            >
+              <EarningCalculator
+                popUpOpen={popUpOpen}
+                setPopUpOpen={setPopUpOpen}
+              />
             </div>
           </div>
           {/******************ABOUT US****************/}

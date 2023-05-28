@@ -82,6 +82,16 @@
 .header__plans-calculator input ,option{
     border-radius: .9rem;
 }
+.earningscalc-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+}
+.popup-close{
+    display: none;
+}
 
 @keyframes moveUpDown {
     0% {
