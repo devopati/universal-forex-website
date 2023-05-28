@@ -79,15 +79,15 @@ function Homepage() {
                     Basic Plan 1000.00% every 1 days for 1 days min:USD 200.00
                     max:USD 1,000.00
                   </option>
-                  <option value="4">
+                  <option value="2">
                     Global Forex Investment 1000.00% every 24 hours for 24 hours
                     min:USD 200.00 max:USD 10,000.00
                   </option>
-                  <option value="2">
+                  <option value="3">
                     Vip Plan 800.00% every 1 days for 1 days min:USD 1,000.00
                     max:USD 9,000.00
                   </option>
-                  <option value="3">
+                  <option value="4">
                     Gold????plan 850.00% every 1 weeks for 1 weeks min:USD
                     10,000.00 max:USD 50,000.00
                   </option>
