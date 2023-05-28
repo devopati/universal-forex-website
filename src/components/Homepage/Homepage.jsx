@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navigation from "../Header/Navigation";
 import "./homepage.css";
+import "animate.css";
+import bgIMG1 from "../../assets/bg1.png";
+import bgIMG2 from "../../assets/bg2.png";
 
 function Homepage() {
   return (
     <>
-      <div className="homepage__container">
+      <Navigation />
+      <div className="homepage__container" style={{ marginTop: "6rem" }}>
         <div className="homepage-contents">
+          <div className="top-bg">
+            <img src={bgIMG1} />
+          </div>
           <div className="head-card">
             <div className="head-right-card">
               <div className="round">
-                <div className="round-head">
-                  <h3>Our aim is to unlock our clients' financial freedom</h3>
+                <div>
+                  <h3 className="round-head">
+                    Our aim is to unlock our clients' financial freedom
+                  </h3>
                 </div>
               </div>
               <div className="welcome-content">
@@ -42,6 +51,9 @@ function Homepage() {
                 />
               </div>
               <div className="header-plan">
+                <div className="headertop-bg">
+                  <img src={bgIMG2} />
+                </div>
                 <label htmlFor="plan">Investment Plan</label>
                 <select className="header-inputs" name="plan">
                   <option value selected>
@@ -120,6 +132,33 @@ function Homepage() {
           </div>
 
           {/***********************************************************/}
+
+          <div className="home-aboutus">
+            <div className="homeabout-cards">
+              <div className="home-about-left">
+                <img
+                  id="about-img"
+                  src="https://globalcapital-investment.com/assets/dist/img/team-group.png"
+                />
+              </div>
+              <div className="home-about-right">
+                <span className="round-head">About Us</span>
+                <h4>Get To Know Us</h4>
+                <p>
+                  Our team consists only of qualified people connected with the
+                  financial industry for years, who are also passionate about
+                  the fledgling but very strong cryptocurrency market and mining
+                  technology. They constantly monitor the market to provide you
+                  - our investors with even greater profits. Having strong
+                  relationships with the most promising entrepreneurs and other
+                  leading investors in the industry, ForextradingWorldwide
+                  implements an investment strategy, building a diversified
+                  portfolio and adjusting the added value to its portfolio
+                  companies.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

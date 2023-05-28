@@ -1,0 +1,10 @@
+.register-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vh;
+}
+.register-card1{
+    background: var(--color-btn-background);
+    color: var(--color-white);
+    width: 100%;
+}
