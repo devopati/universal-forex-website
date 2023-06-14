@@ -14,8 +14,12 @@ const Dashboard = () => {
   const [SideNavActive, setSideNavActive] = useState(false);
   const [profileActive, setProfileActive] = useState(false);
   const outletClickHandler = () => {
-    setProfileActive(false);
-    setSideNavActive(false);
+    if (profileActive) {
+      setProfileActive(false);
+    }
+    if (SideNavActive) {
+      setSideNavActive(false);
+    }
   };
   return (
     <div className="dashboard-container">

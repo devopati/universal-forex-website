@@ -37,6 +37,7 @@ const Sidenav = ({ setSideNavActive }) => {
     }
     // sideNavHandler(true);
   };
+
   return (
     <div className="sidenav-container">
       <div className="side-top-small">
