@@ -198,6 +198,7 @@
     }
     .user-portfolio{
         padding: 1.1rem .8rem;
+        height: 30vh;
     }
     .user-portfolio > div{
         gap: .3rem;
