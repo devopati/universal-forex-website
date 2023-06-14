@@ -13,6 +13,10 @@ import { MdSearch } from "react-icons/md";
 const Dashboard = () => {
   const [SideNavActive, setSideNavActive] = useState(false);
   const [profileActive, setProfileActive] = useState(false);
+  const outletClickHandler = () => {
+    setProfileActive(false);
+    setSideNavActive(false);
+  };
   return (
     <div className="dashboard-container">
       <div className={`side-nav ${SideNavActive && "side-nav-open"}`}>
@@ -30,6 +34,7 @@ const Dashboard = () => {
             />
             <span>LOGO</span>
           </div>
+          <div className="non-viscible">.</div>
           <div className="dashboard-profile">
             <div className="pr-icon">
               <MdSearch />
@@ -65,10 +70,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div
-          className="dashboard-outlets"
-          onClick={() => setSideNavActive(false)}
-        >
+        <div className="dashboard-outlets" onClick={outletClickHandler}>
           <Outlet />
         </div>
       </div>

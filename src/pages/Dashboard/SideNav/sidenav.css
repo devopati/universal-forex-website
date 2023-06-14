@@ -1,26 +1,33 @@
 .sidenav-container{
     background: var( --color-white);
-    height: auto;
+    /* height: auto; */
     height: 100vh;
     transition: all 0.5s ease-in-out;
     z-index: 3;
+    position: sticky;
+    top: 0;
 }
-.logo{
-    transition: .5s ease-in-out;
-}
+
 .sidenav-top{
+    position: absolute;
+    top: 0;
     display: flex;
+    padding: 1.1rem 1rem;
     align-items: center;
-    padding: 1.4rem 1rem;
     justify-content: space-between;
     user-select: none;
     transition: .5s ease-in-out;
+    width: 100%;
 }
+/* .logo{
+    position: absolute;
+    left: 250%;
+} */
 .side-nav-items{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 2.5rem;
+    margin-top: 3.2rem;
     gap: 1rem;
     user-select: none;
     transition: all 0.5s ease-in-out;
@@ -54,12 +61,12 @@
     color: var(--color-black);
 }
 #navitem-icon{
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--color-text);
     cursor: pointer;
 }
 #nav-icon{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--color-text);
     transition: .5s ease-in-out;
     cursor: pointer;

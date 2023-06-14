@@ -72,10 +72,10 @@ const Sidenav = ({ setSideNavActive }) => {
           </span>
         </li>
         <div className={`dropdown ${dropDown2Active && "dropdown-active"}`}>
-          <Link to="">
+          <Link to="depositfunds">
             <li onClick={() => setMenuItem("deposits")}>Deposit Funds</li>
           </Link>
-          <Link to="">
+          <Link to="viewdeposits">
             <li onClick={() => setMenuItem("deposits")}>View Deposits</li>
           </Link>
         </div>
@@ -91,10 +91,10 @@ const Sidenav = ({ setSideNavActive }) => {
           </span>
         </li>
         <div className={`dropdown ${dropDown1Active && "dropdown-active"}`}>
-          <Link to="">
+          <Link to="withdrawFunds">
             <li onClick={() => setMenuItem("withdrawals")}>Withdraw Funds</li>
           </Link>
-          <Link to="">
+          <Link to="viewwithdraws">
             <li onClick={() => setMenuItem("withdrawals")}>View Withdraws</li>
           </Link>
         </div>

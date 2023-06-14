@@ -18,3 +18,196 @@
 .home-header span span{
     border-bottom: 3px solid var(--color-bg);
 }
+.home-body{
+    display: flex;
+    gap: 2rem;
+}
+.home-body-cards{
+    /* width: 50%; */
+    display: flex;
+    gap: 2rem;
+    align-items: baseline;
+}
+.home-body-card{
+    width: 50%;
+    background: var(--color-pink);
+    border-radius: 9.124px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: var(--color-white);
+    display: flex;
+    padding:2rem 1rem;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.home-hanging{
+    position: absolute;
+    background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea);
+    border-bottom-left-radius: .7rem;
+    padding: 4.512px 7.52px;
+    right: 0;
+    top: 0;
+}
+.home-hanging span{
+    font-size: 10.947px;
+}
+.home-card2{
+    background: var(--color-bg);
+}
+.home-body-card span{
+    display: flex;
+    flex-direction: column;
+}
+.home-body-card img{
+    color: white;
+    width: 30%;
+}
+.home-refferals{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+}
+.refer-card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background: linear-gradient(to right top, #8450d7, #a656e1, #c75cea);
+    padding: 2rem;
+    border-radius: 8px;
+    color: var(--color-white);
+}
+.refer-card input{
+    padding: 10.6px 17px;
+    border: none;
+}
+.refer-card input:focus{
+    outline: 1px solid var(--color-text);
+}
+
+.refer-card button{
+    padding: .6rem;
+    background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea);
+    border-radius: 160px;
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+}
+.earning-referral-card{
+    background: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    /* padding: ; */
+}
+.earning-referral-card span{
+    color: var(--color-black);
+    font-weight: 500;
+}
+.earning-referral-card a{
+    color: var( --color-btn-background);
+    cursor: pointer;
+}
+.earning-referral-card div{
+    display: flex;
+    justify-content: space-between;
+}
+.earning-ref-table th,td{
+    color: var(--color-text);
+    font-weight: normal;
+    font-size: 14px;
+    padding: 8px 0;
+    text-align: left;
+    border-bottom: 2px solid var(--color-text);
+}
+.earning-ref-table table{
+    /* border-bottom: 2px solid var(--color-text); */
+    width: 100%;
+}
+.home-body-sub-main-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* display: none; */
+}
+.user-portfolio{
+    background: var(--color-white);
+    padding: 2rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    height: 60vh;
+    /* display: none; */
+}
+.user-portfolio>span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.user-portfolio > div{
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+    justify-content: center;
+}
+.user-portfolio > div span{
+    font-weight: 100;
+    font-size: 12px;
+    color: var(--color-black);
+}
+.user-portfolio > div div{
+    /* background: red; */
+    height: 14px;
+    width: 50px;
+}
+.earnings-div{
+    background: #20c997;
+}
+.inactive-div{
+    background: #6f42c1;
+}
+.active-div{
+    background: #007bff;
+}
+
+@media screen and (max-width:968px) {
+    .home-container{
+        padding: 0 .6rem;
+    }
+    .home-body{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .home-body-cards{
+        flex-direction: column;
+    }
+    .home-body-card{
+        width: 100%;
+        padding: .5rem;
+        align-items: center;
+        justify-content: start;
+        gap: 2rem;
+        /* z-index: 1; */
+    }
+    .home-refferals{
+        width: 100%;
+    }
+    .home-body-card img{
+        width: 15%;
+    }
+    .user-portfolio{
+        padding: 1.1rem .8rem;
+    }
+    .user-portfolio > div{
+        gap: .3rem;
+    }
+    .user-portfolio > div div{
+        width: 40px;
+        height: 10px;
+    }
+}
+/* *{
+    outline-style: dashed;
+    outline-color: red;
+} */
