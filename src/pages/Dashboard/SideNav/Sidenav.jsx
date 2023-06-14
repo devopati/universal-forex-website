@@ -51,7 +51,7 @@ const Sidenav = ({ setSideNavActive }) => {
         <div className={`logo ${!fullMenu && "no-logo"}`}>LOGO</div>
       </div>
       <div className={`side-nav-items ${!fullMenu && "side-nav-item-close"}`}>
-        <Link to="">
+        <Link to="" onClick={() => setSideNavActive(false)}>
           <li
             onClick={() => setMenuItem("dashboard")}
             className={`${menuItem == "dashboard" && "menu-item-clicked"}`}
@@ -73,10 +73,10 @@ const Sidenav = ({ setSideNavActive }) => {
           </span>
         </li>
         <div className={`dropdown ${dropDown2Active && "dropdown-active"}`}>
-          <Link to="depositfunds">
+          <Link to="depositfunds" onClick={() => setSideNavActive(false)}>
             <li onClick={() => setMenuItem("deposits")}>Deposit Funds</li>
           </Link>
-          <Link to="viewdeposits">
+          <Link to="viewdeposits" onClick={() => setSideNavActive(false)}>
             <li onClick={() => setMenuItem("deposits")}>View Deposits</li>
           </Link>
         </div>
@@ -92,15 +92,15 @@ const Sidenav = ({ setSideNavActive }) => {
           </span>
         </li>
         <div className={`dropdown ${dropDown1Active && "dropdown-active"}`}>
-          <Link to="withdrawFunds">
+          <Link to="withdrawFunds" onClick={() => setSideNavActive(false)}>
             <li onClick={() => setMenuItem("withdrawals")}>Withdraw Funds</li>
           </Link>
-          <Link to="viewwithdraws">
+          <Link to="viewwithdraws" onClick={() => setSideNavActive(false)}>
             <li onClick={() => setMenuItem("withdrawals")}>View Withdraws</li>
           </Link>
         </div>
         {/* </Link> */}
-        <Link to="earnings">
+        <Link to="earnings" onClick={() => setSideNavActive(false)}>
           <li
             onClick={() => setMenuItem("earnings")}
             className={`${menuItem == "earnings" && "menu-item-clicked"}`}
@@ -111,7 +111,7 @@ const Sidenav = ({ setSideNavActive }) => {
             </span>
           </li>
         </Link>
-        <Link to="referrals">
+        <Link to="referrals" onClick={() => setSideNavActive(false)}>
           <li
             onClick={() => setMenuItem("my referrals")}
             className={`${menuItem == "my referrals" && "menu-item-clicked"}`}
@@ -122,7 +122,7 @@ const Sidenav = ({ setSideNavActive }) => {
             </span>
           </li>
         </Link>
-        <Link to="help">
+        <Link to="help" onClick={() => setSideNavActive(false)}>
           <li
             onClick={() => setMenuItem("help")}
             className={`${menuItem == "help" && "menu-item-clicked"}`}
