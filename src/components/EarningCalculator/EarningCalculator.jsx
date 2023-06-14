@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import "./earncalc.css";
+import { Link } from "react-router-dom";
 
 const EarningCalculator = ({ plan, amount, setPopUpOpen, popUpOpen }) => {
   let period = "";
@@ -60,8 +61,12 @@ const EarningCalculator = ({ plan, amount, setPopUpOpen, popUpOpen }) => {
         </div>
       </div>
       <div className="earncalc-btns">
-        <button className="btn">LOGIN</button>
-        <button className="btn">SIGNUP</button>
+        <Link to="login">
+          <button className="btn">LOGIN</button>
+        </Link>
+        <Link to="register">
+          <button className="btn">SIGNUP</button>
+        </Link>
       </div>
     </div>
   );

@@ -24,4 +24,9 @@ export const navItems = [
     label: "Contact Us",
     path: "/contactus",
   },
+  {
+    id: "dash",
+    label: "dash",
+    path: "/dashboard",
+  },
 ];
