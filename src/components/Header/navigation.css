@@ -10,7 +10,8 @@ li{
     padding: .4rem 3.7rem;
     position: fixed;
     height: 10vh;
-    width: 100%;
+    top: 0;
+    width: 100vw;
     z-index: 5;
     transition: 0.4s ease-in-out;
 }

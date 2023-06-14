@@ -1,10 +1,128 @@
-.register-cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100vh;
+.register-container{
+    /* padding: 1rem 2.5rem; */
 }
-.register-card1{
-    background: var(--color-btn-background);
+
+.reg-form{
+    display: flex;
+    gap: 2rem;
+    height: 100vh;
+}
+.reg-left{
+    width: calc(60%);
+    padding: 1rem 2.5rem;
     color: var(--color-white);
+    background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea)
+}
+.reg-heading{
+    width: max-content;
+    font-weight: normal;
+    padding:  .1rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+  
+.reg-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5%;
+    height: 3px;
+    background-color: var(--color-white); 
+    transition: width 0.3s ease-in-out; 
+  }
+  
+  .reg-left:hover .reg-heading::after {
+    width: 100%;
+  }
+ 
+.reg-left h3{
+    font-size: 16px;
+    font-weight: normal;
+}
+.reg-right{
+    padding-top: 1rem;
+    padding-right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    overflow-y: auto;
+}
+.reg-right h1{
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 20px;
+}
+.form-input-flex{
+    display: flex;
+    gap: 2rem;
+}
+.form-input-flex input{
     width: 100%;
 }
+.form-input input{
+    width: 100%;
+}
+.reg-right input{
+    padding: 9.6px 17px;
+    /* width: 100%; */
+    border: 1.5px solid grey;
+    border-radius: 4px;
+}
+.reg-right input:focus{
+    border: 1.5px solid #5f49cc;
+    outline: none;
+}
+.reg-right button{
+    background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea);
+    color: var(--color-white);
+    border-radius: 1.9rem;
+    font-weight: normal;
+    font-size: 14px;
+}
+.form-btns{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+}
+.form-btns a{
+    color:#5f49cc ;
+    font-weight: 5  00;
+    cursor: pointer;
+}
+.form-checkbox{
+    display: flex;
+    gap: 1rem;
+    align-items: first baseline;
+}
+.form-checkbox label{
+    font-weight: normal;
+    font-size: 14px;
+}
+
+@media screen and (max-width:768px){
+    .reg-form{
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+    }
+    .reg-left{
+        padding: 1rem;
+        width: 100%;
+    }
+    .reg-right{
+        padding: 1rem;
+
+    }
+    .reg-heading{
+       width: 100%; 
+       font-size: 28px;
+    }
+    .form-input-flex{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+

@@ -1,0 +1,9 @@
+.forminput-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.forminput-container input{
+    border-radius: 0.3rem;
+    border: 1.7px solid grey;
+}

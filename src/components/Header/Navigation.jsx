@@ -45,7 +45,9 @@ function Navigation() {
           );
         })}
         <div className="navigation-btns">
-          <button id="login-btn">LOGIN</button>
+          <Link to="/login">
+            <button id="login-btn">LOGIN</button>
+          </Link>
           <Link to="/register">
             <button id="signup-btn">SIGN UP</button>
           </Link>

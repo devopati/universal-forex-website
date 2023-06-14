@@ -5,6 +5,7 @@ import "animate.css";
 import bgIMG1 from "../../assets/bg1.png";
 import bgIMG2 from "../../assets/bg2.png";
 import EarningCalculator from "../EarningCalculator/EarningCalculator";
+import img3 from "../../assets/about-agency.jpeg";
 
 function Homepage() {
   const [popUpOpen, setPopUpOpen] = useState(false);
@@ -247,6 +248,99 @@ function Homepage() {
                   companies.
                 </p>
               </div>
+            </div>
+          </div>
+          <div className="gettoknowus-container homeabout-cards">
+            <div className="gettoknow-left">
+              <span className="round-head">Why Work With Us?</span>
+              <div>
+                <p>
+                  Access to markets: Trading companies have access to various
+                  markets and can help traders to diversify their portfolio.
+                  Trading tools: Trading companies often provide their clients
+                  with advanced trading tools and technology to help them make
+                  better trades.
+                </p>
+              </div>
+            </div>
+            <div className="gettoknow-right home-about-left">
+              <img src={img3} alt="" />
+            </div>
+          </div>
+          <div className="investments-plans-container">
+            <div className="investments-header">
+              <span className="round-head">Investment Plans</span>
+              <h1>Our Investment Plans</h1>
+            </div>
+            <div className="invest-cards">
+              <div className="invest-card investmentplans-card">
+                <h3>BASIC PLAN</h3>
+                <h1>1000.00%</h1>
+                <div>
+                  <small>Profit every</small>
+                  <small id="small-invest">1 Days</small>
+                </div>
+                <br />
+                <div>
+                  <h5>For 1 days</h5>
+                  <small>Invest</small>
+                </div>
+                <h3>USD 100.00 - USD 1,000.00</h3>
+              </div>
+              {/* ----------------------------------------------------- */}
+              <div className="invest-card investmentplans-card">
+                <h3>UNIVERSAL INVESTMENT</h3>
+                <h1>1000.00%</h1>
+                <div>
+                  <small>Profit every</small>
+                  <small id="small-invest">1 Days</small>
+                </div>
+                <br />
+                <div>
+                  <h5>For 1 days</h5>
+                  <small>Invest</small>
+                </div>
+                <h3>USD 100.00 - USD 1,0000.00</h3>
+              </div>
+              {/* ----------------------------------------------------- */}
+              <div className="invest-card investmentplans-card">
+                <h3>VIP PLAN</h3>
+                <h1>800.00%</h1>
+                <div>
+                  <small>Profit every</small>
+                  <small id="small-invest">1 Days</small>
+                </div>
+                <br />
+                <div>
+                  <h5>For 1 days</h5>
+                  <small>Invest</small>
+                </div>
+                <h3>USD 1000 - USD 9,000.00</h3>
+              </div>
+              {/* ----------------------------------------------------- */}
+              <div className="invest-card investmentplans-card">
+                <h3>GOLD PLAN</h3>
+                <h1>850.00%</h1>
+                <div>
+                  <small>Profit every</small>
+                  <small id="small-invest">1 weeks</small>
+                </div>
+                <br />
+                <div>
+                  <h5>For 1 week</h5>
+                  <small>Invest</small>
+                </div>
+                <h3>USD 10000.00 - USD 50,000.00</h3>
+              </div>
+            </div>
+          </div>
+          <div className="joinus-container">
+            <div className="joinus-header">
+              <span className="round-head">Lets Work Together</span>
+              <h1>JOIN US TODAY</h1>
+            </div>
+            <div>
+              <button className="btn">CREATE ACCOUNT</button>
             </div>
           </div>
         </div>
