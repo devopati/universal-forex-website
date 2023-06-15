@@ -30,6 +30,7 @@
     position: relative;
     user-select: none;
     transition: 0.5s ease-in-out;
+    cursor: pointer;
 }
 .profile-dropdown{
     position: absolute;
@@ -42,6 +43,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     border-radius: .3rem;
     visibility: hidden;
+    z-index: 2;
 }
 .profile-dropdown div{
     display: flex;
@@ -80,6 +82,13 @@
 }
 .side-nav{
     z-index: 2;
+}
+.copyright{
+    background-color: #f4f4f4;
+    color: var(--color-txt);
+    padding: 1rem 1.2rem;
+    text-align: center;
+    margin: .5rem 0;
 }
 
 @media screen and (max-width:1024px){

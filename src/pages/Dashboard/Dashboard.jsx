@@ -77,6 +77,9 @@ const Dashboard = () => {
         <div className="dashboard-outlets" onClick={outletClickHandler}>
           <Outlet />
         </div>
+        <div className="copyright">
+          <small>Copyright Global Capital Investment © 2023 Version :3.7</small>
+        </div>
       </div>
     </div>
   );

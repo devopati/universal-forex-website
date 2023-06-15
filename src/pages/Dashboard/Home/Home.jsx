@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import revicon from "../../../assets/revicon.svg";
 import { Link } from "react-router-dom";
+import TradingVieWidget from "../../../components/TradingVieWidget/TradingVieWidget";
 const Home = () => {
   return (
     <div className="home-container">
@@ -10,7 +11,9 @@ const Home = () => {
           <span>dash</span>board
         </span>
       </div>
-      <div className="home-trading-view">currencies</div>
+      <div className="home-trading-view" id="ticker-tape-container">
+        <TradingVieWidget />
+      </div>
       <div className="home-body">
         <div className="home-body-sub-main-cards">
           <div className="home-body-cards">
