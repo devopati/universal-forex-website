@@ -72,7 +72,7 @@
 .profile-active{
     visibility: visible;
 }
-.pr-icon{
+.pr-icon, .dashp-icon{
     display: none;
 }
 .dashboard-outlets{
@@ -94,10 +94,19 @@
 @media screen and (max-width:1024px){
     .dashboard-profile{
         gap: 1rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .pr-icon{
         display: block;
         font-size: 2rem;
+    }
+    .dashp-icon{
+        display:flex;
+        font-size: 2rem;
+        color: var(--color-txt);
     }
     .side-nav{
         position: fixed;
@@ -136,6 +145,7 @@
     .dashboard-profile{
         right: .7rem;
         top: .9rem;
+        gap: 2.5rem;
     }
     .profile-dropdown span{
         display: block;
@@ -143,5 +153,8 @@
     .profile-dropdown{
         bottom: -5rem;
         right: .1rem;
+    }
+    .dashboard-header{
+        height: 7.5678vh;
     }
 }

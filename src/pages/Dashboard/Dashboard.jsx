@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./dashboard.css";
-import { AiOutlineCaretDown } from "react-icons/ai";
+import { AiOutlineCaretDown, AiOutlineSearch } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import Sidenav from "./SideNav/Sidenav";
 import { Outlet } from "react-router";
@@ -40,14 +40,14 @@ const Dashboard = () => {
           </div>
           <div className="non-viscible">.</div>
           <div className="dashboard-profile">
-            <div className="pr-icon">
-              <MdSearch />
+            <div className="dashp-icon">
+              <AiOutlineSearch />
             </div>
-            <button className="lang-btn top-div">
+            {/* <button className="lang-btn top-div">
               <img src="	https://globalcapital-investment.com/uploads/gb-eng.png" />{" "}
               <small>ENG</small>
               <RiArrowDownSLine />
-            </button>
+            </button> */}
             <div
               className="profile"
               onClick={() => setProfileActive(!profileActive)}
