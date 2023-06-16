@@ -35,25 +35,26 @@
 .profile-dropdown{
     position: absolute;
     background: var(--color-white);
-    padding: .5rem .9rem;
-    bottom: -4.5rem;
+    padding: .8rem .9rem;
+    bottom: -6.5rem;
     display: flex;
     flex-direction: column;
-    gap: .4rem;
+    gap: .8rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     border-radius: .3rem;
     visibility: hidden;
     z-index: 2;
+    right: 1rem;
 }
 .profile-dropdown div{
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 1.2rem;
     cursor: pointer;
     color: var(--color-black);
 }
 .profile-dropdown span{
-    font-size: 17.542px;
+    font-size: 20.542px;
 }
 .profile-dropdown span:hover{
     color: grey;
@@ -151,7 +152,7 @@
         display: block;
     }
     .profile-dropdown{
-        bottom: -5rem;
+        bottom: -7rem;
         right: .1rem;
     }
     .dashboard-header{
