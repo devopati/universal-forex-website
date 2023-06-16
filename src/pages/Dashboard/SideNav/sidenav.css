@@ -46,7 +46,7 @@
 .side-nav-items li span{
     font-weight: 500;
     text-transform: capitalize;
-    font-size: 	0.9375rem;
+    font-size: 	16px;
     color: var(--color-text);
     display: flex; 
     justify-content: space-between;
