@@ -88,6 +88,7 @@
 }
 .dropdown li{
     color: var(--color-text);
+    margin-top: .85rem;
 }
 .dropdown li:hover{
     color: var(--color-black);
