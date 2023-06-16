@@ -1,6 +1,7 @@
 /* DEPOSIT FUNDS */
 .depositfunds-container{
     width: 100%;
+    transition: .2s ease-in-out;
 }
 .depositfunds-header{
     background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea);
@@ -238,6 +239,10 @@
 }
 .show-deposit-popup{
         z-index: 4;
+}
+.blur{
+    filter: blur(5px);
+    /* background-color: rgba(0, 0, 0, 0.5);  */
 }
 /* --------------------------------- */
 

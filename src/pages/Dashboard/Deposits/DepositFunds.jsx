@@ -62,10 +62,14 @@ const DepositFunds = () => {
       setTimeout(() => {
         setDepositPopUpError(false);
         setDepositAccount("");
-      }, 3000);
+      }, 3500);
     }
   };
-
+  const amountHandler = (amount) => {
+    const amountString = amount.toString();
+    const trimmedAmountString = amountString.replace(/^0+/, "");
+    return parseInt(trimmedAmountString, 10);
+  };
   return (
     <>
       <div
@@ -75,7 +79,7 @@ const DepositFunds = () => {
       >
         <DepositError setDepositPopUpError={setDepositPopUpError} />
       </div>
-      <div className="depositfunds-container">
+      <div className={`depositfunds-container ${depositPopUpError && "blur"}`}>
         <div className="depositfunds-header">
           <h2>
             <span>Depo</span>sits/New deposit
@@ -93,9 +97,13 @@ const DepositFunds = () => {
           </div>
         </div>
         <div className="depositfunds-body">
-          <div className="depositfunds-cards">
+          <div className={`depositfunds-cards`}>
             {/* ========================================================= */}
-            <div className="depositfunds-card dep-lower-card dep-small">
+            <div
+              className={`depositfunds-card dep-lower-card dep-small ${
+                depositPopUpError && "blur"
+              }`}
+            >
               <div>
                 <img src={revicon} alt="" />
               </div>
@@ -106,7 +114,7 @@ const DepositFunds = () => {
               >
                 <span>
                   {manualPaymenActive
-                    ? `Pay USD ${depositAmount}.00`
+                    ? `Pay USD ${amountHandler(depositAmount)}.00`
                     : "USD 0.00"}
                 </span>
                 <small>{!manualPaymenActive && "Total deposits"}</small>
@@ -117,7 +125,9 @@ const DepositFunds = () => {
             </div>
 
             <div
-              className={`depositfunds-card ${depositActive && "paybig-card"} `}
+              className={`depositfunds-card ${depositActive && "paybig-card"} ${
+                depositPopUpError && "blur"
+              }`}
             >
               {/* ========================MANUAL-PAYMTNT PROCEDURE================================= */}
               <div
@@ -284,7 +294,11 @@ const DepositFunds = () => {
                 {!depositActive ? "Proceed to amount" : "Proceed to pay"}
               </button>
             </div>
-            <div className="depositfunds-card dep-lower-card dep-big">
+            <div
+              className={`depositfunds-card dep-lower-card dep-big ${
+                depositPopUpError && "blur"
+              }`}
+            >
               <div>
                 <img src={revicon} alt="" />
               </div>
@@ -295,7 +309,7 @@ const DepositFunds = () => {
               >
                 <span>
                   {manualPaymenActive
-                    ? `Pay USD ${depositAmount}.00`
+                    ? `Pay USD ${amountHandler(depositAmount)}.00`
                     : "USD 0.00"}
                 </span>
                 <small>{!manualPaymenActive && "Total deposits"}</small>
