@@ -1,0 +1,33 @@
+.deposit-error-container{
+    background: white;
+    text-align: center;
+    height: max-content;
+    width: 90%;
+    padding: 3.1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: 0.5s ease-in-out;
+}
+#dep-error-icon{
+    color: red;
+    font-size: 90px;
+}
+.deposit-error-container span{
+    font-size: 30px;
+}
+.deposit-error-container button{
+    background: #512DA8;
+    color: var(--color-white);
+}
+@media screen and (max-width:1024px) {
+    .deposit-error-container{
+        width: 100%;
+    }
+    #dep-error-icon{
+        font-size: 60px;
+    }
+}
