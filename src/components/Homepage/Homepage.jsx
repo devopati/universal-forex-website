@@ -6,6 +6,7 @@ import bgIMG1 from "../../assets/bg1.png";
 import bgIMG2 from "../../assets/bg2.png";
 import EarningCalculator from "../EarningCalculator/EarningCalculator";
 import img3 from "../../assets/about-agency.jpeg";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   const [popUpOpen, setPopUpOpen] = useState(false);
@@ -94,8 +95,12 @@ function Homepage() {
                 </p>
 
                 <div className="access-btns">
-                  <button className="btn">CREATE ACCOUNT</button>
-                  <button className="btn-login">LOGIN</button>
+                  <Link to="/register">
+                    <button className="btn">CREATE ACCOUNT</button>
+                  </Link>
+                  <Link to="login">
+                    <button className="btn-login">LOGIN</button>
+                  </Link>
                 </div>
               </div>
             </div>

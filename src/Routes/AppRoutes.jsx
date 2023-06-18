@@ -12,6 +12,7 @@ import WithdrawFunds from "../pages/Dashboard/Withdrawals/WithdrawFunds";
 import Earnings from "../pages/Dashboard/Earnings/Earnings";
 import Referrals from "../pages/Dashboard/Referrals/Referrals";
 import Help from "../pages/Dashboard/Help/Help";
+import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 
 function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ function AppRoutes() {
       <Route path="/" element={<Homepage />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/forgotpassword" element={<ForgotPassword />} />
       <Route path="/dashboard" element={<Dashboard />}>
         <Route path="" element={<Home />} />
         <Route path="depositfunds" element={<DepositFunds />} />

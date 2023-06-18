@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./dashboard.css";
 import { AiOutlineCaretDown, AiOutlineSearch } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import Sidenav from "./SideNav/Sidenav";
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { FiMenu } from "react-icons/fi";
 import { RxPerson } from "react-icons/rx";
 import { HiPencil } from "react-icons/hi";
 import { MdSearch } from "react-icons/md";
+import { logoutUser } from "../../services/authService";
+import { useDispatch, useSelector } from "react-redux";
+import { SET_LOGIN, selectName } from "../../Redux/Features/Auth/authSlice";
 
 const Dashboard = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const name = useSelector(selectName);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [SideNavActive, setSideNavActive] = useState(false);
   const [profileActive, setProfileActive] = useState(false);
   const outletClickHandler = () => {
@@ -20,6 +29,11 @@ const Dashboard = () => {
     if (SideNavActive) {
       setSideNavActive(false);
     }
+  };
+  const logout = async () => {
+    await logoutUser();
+    await dispatch(SET_LOGIN(false));
+    navigate("/");
   };
   return (
     <div className="dashboard-container">
@@ -54,7 +68,7 @@ const Dashboard = () => {
             >
               <CgProfile id="profile-icon" />
               <span>
-                Name <span>verified</span>
+                {name} <span>verified</span>
               </span>
 
               <div
@@ -66,7 +80,7 @@ const Dashboard = () => {
                   <RxPerson />
                   <span>Account</span>
                 </div>
-                <div>
+                <div onClick={logout}>
                   <HiPencil />
                   <span>Logout</span>
                 </div>
