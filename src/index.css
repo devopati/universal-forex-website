@@ -32,6 +32,9 @@ body {
   min-width: 320px;
   min-height: 100vh; */
 }
+:checked{
+  cursor: pointer;
+}
 
 button {
   border-radius: 8px;

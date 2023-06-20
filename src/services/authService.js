@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 // const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+// const BACKEND_URL = "https://capitalinvestments.onrender.com";
 const BACKEND_URL = "https://capitalinvestments.onrender.com";
 
 export const validateEmail = (email) => {
@@ -19,8 +20,8 @@ export const registerUser = async (userData) => {
   console.log(BACKEND_URL);
   try {
     const response = await axios.post(
-      `https://capitalinvestments.onrender.com/api/v1/auth/register`,
-      // "http://localhost:5000/api/v1/auth/register",
+      `${BACKEND_URL}/api/v1/auth/register`,
+
       userData
     );
     if (response.statusText === 200) {
@@ -41,8 +42,7 @@ export const registerUser = async (userData) => {
 export const loginUser = async (userData) => {
   try {
     const response = await axios.post(
-      `https://capitalinvestments.onrender.com/api/v1/auth/login`,
-      // "http://localhost:5000/api/v1/auth/login",
+      `${BACKEND_URL}/api/v1/auth/login`,
       userData
     );
     if (response.status === 200) {
@@ -60,10 +60,7 @@ export const loginUser = async (userData) => {
 // LOGOUT USER
 export const logoutUser = async () => {
   try {
-    await axios.get(
-      `${BACKEND_URL}/api/v1/auth/login`
-      // "http://localhost:5000/api/v1/auth/logout"
-    );
+    await axios.get(`${BACKEND_URL}/api/v1/auth/logout`);
   } catch (error) {
     const message =
       (error.response && error.response.data && error.response.data.message) ||
