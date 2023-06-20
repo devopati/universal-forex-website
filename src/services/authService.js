@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 // const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-const BACKEND_URL = "https://rbsite.onrender.com";
+const BACKEND_URL = "https://capitalinvestments.onrender.com";
 
 export const validateEmail = (email) => {
   return email
@@ -19,7 +19,7 @@ export const registerUser = async (userData) => {
   console.log(BACKEND_URL);
   try {
     const response = await axios.post(
-      `${BACKEND_URL}/api/v1/auth/register`,
+      `https://capitalinvestments.onrender.com/api/v1/auth/register`,
       // "http://localhost:5000/api/v1/auth/register",
       userData
     );
@@ -41,7 +41,7 @@ export const registerUser = async (userData) => {
 export const loginUser = async (userData) => {
   try {
     const response = await axios.post(
-      `${BACKEND_URL}/api/v1/auth/login`,
+      `https://capitalinvestments.onrender.com/api/v1/auth/login`,
       // "http://localhost:5000/api/v1/auth/login",
       userData
     );
