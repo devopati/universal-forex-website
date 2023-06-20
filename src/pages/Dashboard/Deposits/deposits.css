@@ -25,7 +25,7 @@
 .depositfunds-header button{
     background: transparent;
     border: 2px  solid var(--color-white);
-    padding: 10px 12px;
+    padding: 7px 12px;
     font-size: 14px;
     color:var(--color-white);
     border-radius: 5px;
@@ -245,9 +245,28 @@
     /* background-color: rgba(0, 0, 0, 0.5);  */
 }
 /* --------------------------------- */
+/*----------------- VIEW DEPOSITS------------- */
+.viewdeposits-container{
+    width: 100%;
+}
+.big-card{
+    position: relative;
+}
+.panel{
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+
+
 
 
 @media screen and (max-width:1024px) {
+    .panel{
+        bottom: -20%
+    }
     .deposit-error{
         width: 100%;
         padding: 0 .3rem;
