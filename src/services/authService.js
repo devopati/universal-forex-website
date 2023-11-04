@@ -17,7 +17,7 @@ export const validateEmail = (email) => {
 // REGISTER USER
 
 export const registerUser = async (userData) => {
-  console.log(BACKEND_URL);
+  // console.log(BACKEND_URL);
   try {
     const response = await axios.post(
       `${BACKEND_URL}/api/v1/auth/register`,
@@ -29,11 +29,14 @@ export const registerUser = async (userData) => {
     }
     return response.data;
   } catch (error) {
-    const message =
-      (error.response && error.response.data && error.response.data.message) ||
-      error.message ||
-      error.toString();
-    toast.error(message);
+    let errMsg;
+    if (error.response && error.response.data && error.response.data.message) {
+      errMsg = error.response.data.message;
+    } else {
+      // If no custom message, use a generic error message
+      errMsg = "An error occurred";
+    }
+    toast.error(errMsg);
     return;
   }
 };

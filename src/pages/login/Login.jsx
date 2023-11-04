@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../services/authService";
 import { SET_LOGIN, SET_NAME } from "../../Redux/Features/Auth/authSlice";
+import Logo from "../../components/Logo";
 
 const initialState = {
   email: "",
@@ -57,7 +58,7 @@ const Login = () => {
           <h1 className="reg-heading">Login</h1>
           <h3>Sign In And Explore Proinvest PLC Fund .</h3>
           <div className="form-logo">
-            <h1>Logo</h1>
+            <Logo />
           </div>
         </div>
         <div className="reg-right login-right">

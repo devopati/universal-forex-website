@@ -12,6 +12,7 @@ import { MdSearch } from "react-icons/md";
 import { logoutUser } from "../../services/authService";
 import { useDispatch, useSelector } from "react-redux";
 import { SET_LOGIN, selectName } from "../../Redux/Features/Auth/authSlice";
+import Logo from "../../components/Logo";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -50,7 +51,7 @@ const Dashboard = () => {
               id="small-dash-icon"
               onClick={() => setSideNavActive(true)}
             />
-            <span>LOGO</span>
+            {/* <Logo /> */}
           </div>
           <div className="non-viscible">.</div>
           <div className="dashboard-profile">

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { GrMenu } from "react-icons/gr";
 import { MdClose } from "react-icons/md";
 import { AiOutlineCaretDown } from "react-icons/ai";
+import Logo from "../Logo";
 
 function Navigation() {
   const [menuClicked, setMenuClicked] = useState(false);
@@ -31,7 +32,7 @@ function Navigation() {
   return (
     <div className={`header-container ${isScrolled && "scrolled"}`}>
       <div className="header-logo">
-        <h2>LOGO</h2>
+        <Logo />
       </div>
       <div className={`header-items ${menuClicked && "menu-clicked"}`}>
         <div className="close-btn" onClick={() => setMenuClicked(false)}>

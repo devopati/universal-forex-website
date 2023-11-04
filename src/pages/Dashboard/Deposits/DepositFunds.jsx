@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./deposits.css";
 import revicon from "../../../assets/revicon.png";
-import pay1 from "../../../assets/pay1.png";
+import pay1 from "../../../assets/mpesa.png";
 import pay2 from "../../../assets/pay2.png";
 import pay3 from "../../../assets/pay3.png";
-import pay4 from "../../../assets/pay4.png";
+import pay4 from "../../../assets/airtel.png";
 import DepositError from "../../../components/DepositError/DepositError";
 import { Link } from "react-router-dom";
 
@@ -216,15 +216,16 @@ const DepositFunds = () => {
                     >
                       <img src={pay2} onClick={() => setPayMethod(2)} />
                     </div>
-                    <div
-                      className={`${payMethod == 3 && "payment-method-active"}`}
-                    >
-                      <img src={pay3} onClick={() => setPayMethod(3)} />
-                    </div>
+
                     <div
                       className={`${payMethod == 4 && "payment-method-active"}`}
                     >
                       <img src={pay4} onClick={() => setPayMethod(4)} />
+                    </div>
+                    <div
+                      className={`${payMethod == 3 && "payment-method-active"}`}
+                    >
+                      <img src={pay3} onClick={() => setPayMethod(3)} />
                     </div>
                   </div>
                 </div>

@@ -9,6 +9,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { VscChromeClose, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import Logo from "../../../components/Logo";
 const Sidenav = ({ setSideNavActive }) => {
   const [fullMenu, setFullMenu] = useState(true);
   const [dropDown1Active, setDropDown1Active] = useState(false);
@@ -48,7 +49,9 @@ const Sidenav = ({ setSideNavActive }) => {
         <div className="side-nav-icons" onClick={menuItemHandler}>
           {fullMenu ? <FiMenu id="nav-icon" /> : <VscClose id="nav-icon" />}
         </div>
-        <div className={`logo ${!fullMenu && "no-logo"}`}>LOGO</div>
+        <div className={`logo ${!fullMenu && "no-logo"}`}>
+          <Logo />
+        </div>
       </div>
       <div className={`side-nav-items ${!fullMenu && "side-nav-item-close"}`}>
         <Link to="" onClick={() => setSideNavActive(false)}>

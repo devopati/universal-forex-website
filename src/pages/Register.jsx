@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { registerUser, validateEmail } from "../services/authService";
 import { useDispatch } from "react-redux";
 import { SET_LOGIN, SET_NAME } from "../Redux/Features/Auth/authSlice";
+import Logo from "../components/Logo";
 
 const initialState = {
   name: "",
@@ -94,7 +95,7 @@ const Register = () => {
           <h1 className="reg-heading">Join Proinvest PLC Fund</h1>
           <h3>Sign Up And Explore Proinvest PLC Fund .</h3>
           <div className="form-logo">
-            <h1>Logo</h1>
+            <Logo />
           </div>
         </div>
         <div className="reg-right">

@@ -6,6 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { RxPerson } from "react-icons/rx";
 import { HiPencil } from "react-icons/hi";
 import { MdSearch } from "react-icons/md";
+import Logo from "../Logo";
 
 const DashBoardHeader = () => {
   return (
@@ -16,7 +17,7 @@ const DashBoardHeader = () => {
         </div>
         <div className="small-dash-header">
           <FiMenu id="small-dash-icon" onClick={() => setSideNavActive(true)} />
-          <span>LOGO</span>
+          <Logo />
         </div>
         <div className="non-viscible">.</div>
         <div className="dashboard-profile">
